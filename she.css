@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 2vh;
+}
+
+header h1 {
+  background: linear-gradient(
+    to bottom,
+    rgba(252, 236, 252, 1) 0%,
+    rgba(251, 166, 225, 1) 50%,
+    rgba(253, 137, 215, 1) 51%,
+    rgba(255, 124, 216, 1) 100%
+  );
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
+nav {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+}
+
+nav.off {
+  top: -300px;
+}
+
+i.off {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  border-bottom: 3px solid orange;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #bbb;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+
+nav li a:hover {
+  color: white;
+}
+
+nav i {
+  position: fixed;
+  font-size: 30px;
+  right: 4vw;
+  top: 2vh;
+  color: white;
+  z-index: 1;
+}
+
+nav i:hover {
+  cursor: pointer;
+}
+
+/*                      section                              */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
+  background-image: url(img/woman.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 90vw;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 15px;
+  color: White;
+  font-weight: bolder;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.womanName {
+  margin: 0 auto;
+  width: 90px;
+}
+
+textarea {
+  margin: 0 auto;
+  width: 80vw;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.textArea {
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.drawTaskBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(231, 48, 222, 0.456);
+  border: none;
+  border-radius: 15px;
+  margin: 3px;
+  color: black;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+
+.drawTaskBtn:hover {
+  background-color: rgba(231, 48, 222, 0.956);
+  cursor: pointer;
+}
+
+.nextBtn {
+  display: block;
+  margin: 0 auto;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 12px;
+  margin-top: 5px;
+  display: block;
+  margin-top: 30px;
+}
+
+div.img {
+  display: none;
+}
+
+footer {
+  line-height: 40px;
+  color: white;
+  border-top: 2px solid white;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  section {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  textarea {
+    max-width: 450px;
+  }
+
+  .textArea {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 700px) {
+  header h1 {
+    font-size: 35px;
+  }
+
+  nav i {
+    font-size: 35px;
+  }
+
+  textarea {
+    width: 60vw;
+    max-width: 450px;
+  }
+
+  .textArea {
+    width: 60vw;
+    max-width: 450px;
+  }
+
+  .womanName {
+    width: 150px;
+    height: 25px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  .drawTaskBtn {
+    font-size: 15px;
+    padding: 3px;
+  }
+
+  .nextBtn {
+    font-size: 25px;
+  }
+
+  nav li a {
+    font-size: 20px;
+  }
+
+  nav {
+    position: static;
+    background-color: none;
+    top: 0;
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+    width: 30vw;
+  }
+
+  .burger i {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  section {
+    background-image: none;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: center;
+    max-width: 1450px;
+  }
+
+  h2:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  div.img {
+    display: block;
+  }
+}
+
+@media (min-width: 1500px) {
+  header h1,
+  header {
+    max-width: 1200px;
+  }
+}
