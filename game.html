@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gra Erotyczna - w grze</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <h1>Gra Erotyczna</h1>
+    </header>
+    <nav class="off">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Zasady</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-angle-up off"></i>
+        </div>
+    </nav>
+    <section>
+        <div class="main">
+            <div class="womanArea">
+                <h2 class="womanNamePlace">Kobieta</h2>
+                <div class="womanPoints"></div>
+                <div class="circles">
+                    <div class="circle" id="cW1">1</div>
+                    <div class="circle" id="cW2">2</div>
+                    <div class="circle" id="cW3">3</div>
+                    <div class="circle" id="cW4">4</div>
+                    <div class="circle" id="cW5">5</div>
+                    <div class="circle" id="cW6">6</div>
+                </div>
+                <div id="diceW"> <button class="drawWomanBtn btn">Rzuć kostką</button></div>
+
+            </div>
+            <div class="manArea">
+                <h2 class="manNamePlace">Mężczyzna</h2>
+                <div class="manPoints"></div>
+                <div class="circles">
+                    <div class="circle" id="cM1">1</div>
+                    <div class="circle" id="cM2">2</div>
+                    <div class="circle" id="cM3">3</div>
+                    <div class="circle" id="cM4">4</div>
+                    <div class="circle" id="cM5">5</div>
+                    <div class="circle" id="cM6">6</div>
+                </div>
+                <div id="diceM"> <button class="drawManBtn btn">Rzuć kostką</button></div>
+            </div>
+    </section>
+    <div id="task"></div>
+    <div class="buttons">
+        <div id="done"></div>
+        <div id="fail"></div>
+    </div>
+    <div class="down"></div>
+
+    <footer>Copyright @ 2019</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="burger.js"></script>
+    <script src="game.js"></script>
+    <script src="tasks.js"></script>
+</body>
+
+</html>
