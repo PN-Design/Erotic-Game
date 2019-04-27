@@ -5,9 +5,10 @@
 }
 
 body {
-    background-color: black;
     display: flex;
     flex-direction: column;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
     align-items: center;
     min-height: 100%;
 }
@@ -134,10 +135,10 @@ textarea {
     right: 0;
     background-color: rgba(231, 48, 222, 0.456);
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 3px;
     color: black;
-    padding: 3px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
     font-size: 11px;
@@ -166,6 +167,7 @@ textarea {
     margin-top: 5px;
     display: block;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 div.img {
@@ -184,20 +186,13 @@ footer {
 
 
 @media (min-width:450px) {
-    /* section {
-        background-size: contain;
-        background-repeat: no-repeat;
-    } */
-
     textarea {
         max-width: 450px;
     }
 
     .textArea {
         max-width: 450px;
-
     }
-
 }
 
 
@@ -228,7 +223,7 @@ footer {
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
 
