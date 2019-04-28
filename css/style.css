@@ -114,7 +114,7 @@ div.img img {
   margin: 0 auto;
 }
 
-article {
+.description{
   width: 80vw;
   margin: 1vh auto;
   color: white;
@@ -210,7 +210,7 @@ footer {
     font-size: 35px;
   }
 
-  article p {
+  .description p {
     font-size: 20px;
     margin-top: 50px;
   }
@@ -248,7 +248,7 @@ footer {
     width: 600px;
   }
 
-  article {
+  .description {
     width: 500px;
   }
 
