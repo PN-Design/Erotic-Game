@@ -24,12 +24,12 @@ const doneButton = '<button class="doneBtn" onclick="done()">Wykonane</button>';
 const failButton = '<button class="failBtn" onclick="failed()">Niewykonane</button>';
 
 // add names form prev pages
-function getNames() {
+const getNames = () => {
     womanNamePlace.textContent = womanName
     manNamePlace.textContent = manName
 }
 
-function getPoints() {
+const getPoints = () => {
     document.querySelector(".womanPoints").innerHTML = `<h3>Punkty: ${womanPoints}<h3>`
     document.querySelector(".manPoints").innerHTML = `<h3>Punkty: ${manPoints}</h3>`
 }
@@ -37,7 +37,7 @@ getNames()
 getPoints()
 
 // change color of points
-changePointsColor = () => {
+const changePointsColor = () => {
     if (manPoints > womanPoints) {
         document.querySelector(".manPoints").style.color = "green"
         document.querySelector(".womanPoints").style.color = "red"
@@ -50,7 +50,7 @@ changePointsColor = () => {
     }
 }
 // throw dice's woman and get dice's number
-throwWomanDice = () => {
+const throwWomanDice = () => {
     if (moveWoman == 1 && moveMan == 0) {
         numberWomanDice = Math.floor(Math.random() * 3) + 1;
         let dice = "<img src=\"img/dice" + numberWomanDice + ".jpg\"/>";
@@ -82,7 +82,7 @@ throwWomanDice = () => {
     }
 }
 // throw man dices and get dices number
-throwManDice = () => {
+const throwManDice = () => {
     if (moveWoman == 1 && moveMan == 0) {
         numberManDice = Math.floor(Math.random() * 3) + 4;
         let dice = "<img src=\"img/dice" + numberManDice + ".jpg\"/>";
@@ -116,17 +116,17 @@ throwManDice = () => {
 document.querySelector('.drawWomanBtn').addEventListener("click", throwWomanDice)
 document.querySelector('.drawManBtn').addEventListener("click", throwManDice)
 // hide thrown buttons
-hideThrowBtns = () => {
+const hideThrowBtns = () => {
     $("#diceM").fadeOut(1250);
     $("#diceW").fadeOut(1250);
 }
 // show dices after click done or fail button
-showDice = () => {
+const showDice = () => {
     $("#diceM").show(700);
     $("#diceW").show(700);
 }
 // choosing task to player
-chooseTask = () => {
+const chooseTask = () => {
     if (numberWomanDice > numberManDice) {
         moveWoman++
         hideThrowBtns()
@@ -157,20 +157,20 @@ chooseTask = () => {
 }
 
 
-showTask = () => {
+const showTask = () => {
     $(document).ready(function () {
         $('#task').delay(1350).show(1550);
     });
 }
 
-showDoneFailedBtns = () => {
+const showDoneFailedBtns = () => {
     setTimeout(function () {
         document.getElementById("done").innerHTML = doneButton
         document.getElementById("fail").innerHTML = failButton
     }, 2800);
 }
 
-checkWhoWin = () => {
+const checkWhoWin = () => {
     if (manPoints > womanPoints) {
         document.getElementById("task").innerHTML = `<h1>Gratulacje!</h1> <h2>Wygrał ${manName}</h2>  <h3>${womanName} pamiętaj o zadaniu, które musisz spełnić:</h3> <p>${manMission} </p>`
     } else if (manPoints < womanPoints) {
@@ -178,7 +178,7 @@ checkWhoWin = () => {
     }
 }
 
-resetAfterClick = () => {
+const resetAfterClick = () => {
     document.getElementById("done").innerHTML = " ";
     document.getElementById("fail").innerHTML = " ";
     if (moveMan === 6 || moveWoman === 6) {
@@ -195,7 +195,7 @@ resetAfterClick = () => {
     }
 }
 
-done = () => {
+const done = () => {
     if (numberManDice > numberWomanDice) {
         manPoints = manPoints + moveMan
         getPoints()
@@ -210,15 +210,15 @@ done = () => {
     changePointsColor()
 }
 
-failed = () => {
+const failed = () => {
     if (numberManDice > numberWomanDice) {
-        manPoints = manPoints - moveMan
+        manPoints = manPoints - (moveMan / 2)
         getPoints()
         redCircleMan()
         resetAfterClick()
     }
     if (numberManDice < numberWomanDice) {
-        womanPoints = womanPoints - moveWoman
+        womanPoints = womanPoints - (moveWoman / 2)
         redCircleWoman()
         getPoints()
         resetAfterClick()
@@ -227,7 +227,7 @@ failed = () => {
 }
 
 
-greenCircleMan = () => {
+const greenCircleMan = () => {
     for (i = 0; i <= 6; i++)
         if (moveMan === i) {
             let number = "cM" + i
@@ -235,7 +235,7 @@ greenCircleMan = () => {
         }
 }
 
-redCircleMan = () => {
+const redCircleMan = () => {
     for (i = 0; i <= 6; i++)
         if (moveMan === i) {
             let number = "cM" + i
@@ -243,7 +243,7 @@ redCircleMan = () => {
         }
 }
 
-greenCircleWoman = () => {
+const greenCircleWoman = () => {
     for (i = 0; i <= 6; i++)
         if (moveWoman === i) {
             let number = "cW" + i
@@ -251,7 +251,7 @@ greenCircleWoman = () => {
         }
 }
 
-redCircleWoman = () => {
+const redCircleWoman = () => {
     for (i = 0; i <= 6; i++)
         if (moveWoman === i) {
             let number = "cW" + i

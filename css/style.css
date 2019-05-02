@@ -129,13 +129,13 @@ div.content {
 
 div.content h1 {
   color: red;
-  font-size: 10vw;
+  font-size: 45px;
 }
 
 div.content h2 {
   color: pink;
-  font-size: 8vw;
-  margin-bottom:50px;
+  font-size: 35px;
+  margin-bottom:20px;
 }
 
 div.content a {
@@ -184,6 +184,15 @@ footer {
     padding: 15px;
     /* max-width: 250px; */
   }
+  div.content h1 {
+    font-size: 55px;
+  }
+  
+  div.content h2 {
+    font-size: 45px;
+    margin-bottom:40px;
+  }
+  
 }
 
 @media (orientation: landscape) {
